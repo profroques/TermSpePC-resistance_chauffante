@@ -1,0 +1,14 @@
+" tirage de la liste de valeurs pour le paramètre choisi"
+parametre_etudie = tirage(moyenne, Incertitude)
+
+" calculs des valeurs du rendement pour chaque valeur du paramètre choisi "
+liste_r = []
+for i in range(0,len(parametre_etudie)) :
+    r = parametre_etudie[i]*675*3/(11.98*2.2262)
+    " les valeurs de r sont ajoutés à la liste "
+    liste_r.append(r)
+
+# étude statistique de la liste des valeurs de r #
+
+moyenne = moy(liste_r)
+Ur = incertitude(liste_r)
